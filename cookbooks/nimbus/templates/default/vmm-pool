@@ -1,0 +1,3 @@
+<% @vmms.each do |vmm| %>
+<%= "#{vmm[:hostname]} #{[ (vmm[:ncpus] / 2) * @memory_request, vmm[:memory_size].round - 1024 ].min} *" %>
+<% end %>
